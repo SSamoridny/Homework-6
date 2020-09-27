@@ -1,0 +1,11 @@
+
+.card-body {
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+}
+
+.jumbotron {
+    background-color: white;
+    border: 1px solid black;
+}
