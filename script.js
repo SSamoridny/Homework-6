@@ -6,7 +6,18 @@ var moment = moment().format('L');
 var APIKey = "166a433c57516f51dfab1f7edaed8413";
 
 //Local storage for searched cities
+var citySearchArray = localStorage.citySearchArray ? JSON.parse(localStorage.citySearchArray) : []
 
+
+
+function showCityButtons () {
+	document.querySelector('#cityArray').innerHTML=''
+	for( i=0; i<citySearchArray.length; i++ )
+	document.querySelector('#cityArray').innerHTML+=`
+	<li onclick="weatherResults('${citySearchArray[i]}')"class="btn btn-secondary mb-1">${citySearchArray[i]}</li>`
+}
+
+showCityButtons()
 
 //Add event listener added to the magnifying glass icon to trigger main page display and local storage functions
 searchButton.addEventListener('click', searchButtonClick);
@@ -15,10 +26,15 @@ searchBarHistory()
 function searchButtonClick(event) {
 	let city = citySearchName.value;
 	console.log(city)
+	citySearchArray.push(city)
+	localStorage.citySearchArray=JSON.stringify(citySearchArray)
+	showCityButtons()
 	//addToSearchHistory(city);
 	weatherResults(city);
 	console.log(city)
 }
+
+
 
 function weatherResults (name) {
 	
