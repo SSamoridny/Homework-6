@@ -1,31 +1,46 @@
-//variable to store the current date
-const currentDay = moment()
-	.format('L');
-//variable to store unique API key
-var API_KEY = "555f0f1cc17650cb7069ee6104be4ed1";
-var searchHistory = getSearchHistory();
-var searchButton = document.getElementById("search-button");
-var searchValue = document.getElementById("search-value");
-var card = {
-	date: document.querySelectorAll(".card-title"),
-	images: document.querySelectorAll(".card-body .card-image"),
-	temp: document.querySelectorAll(".card-body .card-temp span"),
-	humidity: document.querySelectorAll(".card-body .card-humid span")
+//Global elements needed for the functions
+var citySearchName = document.getElementById('searchValue')
+var searchButton = document.getElementById('search-button')
+var moment = moment().format('L');
+//var APIKey = "0b276ca072mshebd5f85a364591cp19a269jsn385a7112a304";
+var APIKey = "166a433c57516f51dfab1f7edaed8413";
+
+//Local storage for searched cities
+
+
+//Add event listener added to the magnifying glass icon to trigger main page display and local storage functions
+searchButton.addEventListener('click', searchButtonClick);
+searchBarHistory()
+//Onclick event to take the Select City bar input and pass it into the API and also to use for local storage and display
+function searchButtonClick(event) {
+	let city = citySearchName.value;
+	console.log(city)
+	//addToSearchHistory(city);
+	weatherResults(city);
+	console.log(city)
 }
 
-var apiData
-// This function adds search to localstorage and updates sidebar
-function addToSearchHistory(City) {
-	searchHistory.push(City);
-	setSearchHistory(searchHistory);
-	var node = document.createElement("li");
-	node.setAttribute("class", "list-group-item");
-	var textnode = document.createTextNode(City);
-	node.appendChild(textnode);
-	//onclick eventlistener for list items
-	node.addEventListener("click", function () {
-		handleSideBarOnClick(City);
+function weatherResults (name) {
+	
+	// Here we are building the URL we need to query the database
+	var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=` + name + `&units=metric&appid=` + APIKey;
+
+	// We then created an AJAX call
+	$.ajax({
+		url: queryURL,
+		method: "GET"
+	}).then(function(response) {
+		console.log(`response is: `, response )
+		apiData = response
+	
+		//This places the information collected into the jumbotron section 
+		document.querySelector('#cityNameJumboDisplay').textContent = apiData.name + ` (` + moment + ')'
+		document.querySelector('#currentJumboTemp').innerHTML = `Temperature : ${(apiData.main.temp)} &#186 C`
+		document.querySelector('#jumboHumidity').innerHTML = `Humidity : ${apiData.main.humidity} %`
+		document.querySelector('#jumboWindSpeed').textContent = `Wind Speed : ${apiData.wind.speed} MPH`
+	
 	});
-	document.querySelector(".cities")
-		.appendChild(node);
-}
+} 
+
+
+

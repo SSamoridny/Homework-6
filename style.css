@@ -1,6 +1,6 @@
 
 .card-body {
-    background-color: blue;
+    background-color: rgb(27, 111, 207);
     color: white;
     border-radius: 10px;  
 }
@@ -12,4 +12,11 @@
 
 .list-group {
     background-color: rgb(236, 233, 233);
+}
+
+.headline {
+    text-align: center;
+    background-color: darkblue;
+    color: white;
+    height: 1.5em;
 }
