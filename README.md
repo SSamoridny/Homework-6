@@ -1,6 +1,6 @@
 Weather Dashboard
 
-https://ssamoridny.github.io/Password-Generator/
+https://ssamoridny.github.io/Weather-Dashboard-Homework-6/
 
 Technologies used:
 
