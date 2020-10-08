@@ -8,7 +8,7 @@
     <link type="text/css" rel="stylesheet" href="style.css"/>
     <script src="https://kit.fontawesome.com/54176cf16f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
     
 </head>
 <body>
@@ -31,11 +31,11 @@
                 
               <!--Main Content Window-->
                   <div class="jumbotron">
-                    <h2 id="cityNameJumboDisplay"></h2>
+                    <h2 id="cityNameJumboDisplay"></h2><div id="icon"></div>
                     <div class="lead" id="currentJumboTemp">Temperature :</div>
                     <div id=jumboHumidity>Humidity</div>
                     <div id="jumboWindSpeed">Wind Speed :</div>
-                    <div id="jumboUVIndex">UV Index:</div>
+                    <div id="uvNum">UV Index:</div>
                   </div>
               
                 <!--5 Day Forecast Section-->
@@ -43,46 +43,48 @@
                 <div class="row">
                     <div class="card col-12 col-md">
                       <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <img class="card-image" src=""/>
-                        <p class="card-text card-temp">Temp:<span></span>&#186 C</p>
-                        <p class="card-text card-humid">Humidity:<span></span>%</p>
+                        <h5 class="card-title" id="date1">Card title</h5>
+                        <div class="img1"></div>
+                        <p class="card-text" id="temp1"></p>
+                        <p class="card-text" id="humid1"></p>
                       </div>
                     </div>
             
                     <div class="card col-12 col-md">
                       <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <img class="card-image" src=""/>
-                        <p class="card-text card-temp">Temp:<span></span>&#186 C</p>
-                        <p class="card-text card-humid">Humidity:<span></span>%</p>
+                        <h5 class="card-title" id="date2">Card title</h5>
+                        <div class="img2"></div>
+                        <p class="card-text" id="temp2"></p>
+                        <p class="card-text" id="humid2"></p>
                       </div>
                     </div>
             
                     <div class="card col-12 col-md">
                       <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <img class="card-image" src=""/>
-                        <p class="card-text card-temp">Temp:<span></span>&#186 C</p>
-                        <p class="card-text card-humid">Humidity:<span></span>%</p>
+                        <h5 class="card-title" id="date3">Card title</h5>
+                        <div class="img3"></div>
+                        <p class="card-text" id="temp3"></p>
+                        <p class="card-text" id="humid3"></p>
                       </div>
                     </div>
 
                     <div class="card col-12 col-md">
                       <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <img class="card-image" src=""/>
-                        <p class="card-text card-temp">Temp:<span></span>&#186 C</p>
-                        <p class="card-text card-humid">Humidity:<span></span>%</p>
+                        <h5 class="card-title" id="date4">Card title</h5>
+                        <div class="img4"></div>
+                        <p class="card-text" id="temp4"></p>
+                        <p class="card-text" id="humid4"></p>
+                        
                       </div>
                     </div>
 
                     <div class="card col-12 col-md">
                       <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <img class="card-image" src=""/>
-                        <p class="card-text card-temp">Temp:<span></span>&#186 C</p>
-                        <p class="card-text card-humid">Humidity:<span></span>%</p>
+                        <h5 class="card-title" id="date5">Card title</h5>
+                        <div class="img5"></div>
+                        <p class="card-text" id="temp5"></p>
+                        <p class="card-text" id="humid5"></p> 
+                      
                       </div>
                     </div>
                   </div>
