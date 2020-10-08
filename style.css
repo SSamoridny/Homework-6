@@ -1,6 +1,5 @@
 body {
-    font-family: 'Michroma', sans-serif;
-    
+    font-family: 'Play', sans-serif;
 }
 
 .card-body {
@@ -10,7 +9,7 @@ body {
 }
 
 .jumbotron {
-    background-color: white !important;
+    background-color: rgb(201, 238, 201) !important;
     border: 1px solid black;
 }
 

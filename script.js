@@ -76,31 +76,31 @@ function weatherResults (name) {
 		document.querySelector('#date1').textContent = moment().add(1, 'days').format('L');
 		document.querySelector('#temp1').innerHTML = `Temp: ${response.daily[1].temp.day} \xB0C`;
 		document.querySelector('.img1').innerHTML = `<img src="https://openweathermap.org/img/wn/${response.daily[1].weather[0].icon}@2x.png"/>`;
-		document.querySelector('#humid1').innerHTML = `Temp: ${response.daily[1].humidity}%`;
+		document.querySelector('#humid1').innerHTML = `Humidity: ${response.daily[1].humidity}%`;
 		console.log(response);
 		
 		document.querySelector('#date2').textContent = moment().add(2, 'days').format('L');
 		document.querySelector('#temp2').innerHTML = `Temp: ${response.daily[2].temp.day} \xB0C`
 		document.querySelector('.img2').innerHTML = `<img src="https://openweathermap.org/img/wn/${response.daily[2].weather[0].icon}@2x.png"/>`;
-		document.querySelector('#humid2').innerHTML = `Temp: ${response.daily[2].humidity}%`;
+		document.querySelector('#humid2').innerHTML = `Humidity: ${response.daily[2].humidity}%`;
 		console.log(response);
   
 		document.querySelector('#date3').textContent = moment().add(3, 'days').format('L');
 		document.querySelector('#temp3').innerHTML = `Temp: ${response.daily[3].temp.day} \xB0C`
 		document.querySelector('.img3').innerHTML = `<img src="https://openweathermap.org/img/wn/${response.daily[3].weather[0].icon}@2x.png"/>`;
-		document.querySelector('#humid3').innerHTML = `Temp: ${response.daily[3].humidity}%`;
+		document.querySelector('#humid3').innerHTML = `Humidity: ${response.daily[3].humidity}%`;
 		console.log(response);
  
 		document.querySelector('#date4').textContent = moment().add(4, 'days').format('L');
 		document.querySelector('#temp4').innerHTML = `Temp: ${response.daily[4].temp.day} \xB0C`
 		document.querySelector('.img4').innerHTML = `<img src="https://openweathermap.org/img/wn/${response.daily[4].weather[0].icon}@2x.png"/>`;
-		document.querySelector('#humid4').innerHTML = `Temp: ${response.daily[4].humidity}%`;
+		document.querySelector('#humid4').innerHTML = `Humidity: ${response.daily[4].humidity}%`;
 		console.log(response);
 
 		document.querySelector('#date5').textContent = moment().add(5, 'days').format('L');
 		document.querySelector('#temp5').innerHTML = `Temp: ${response.daily[5].temp.day} \xB0C`
 		document.querySelector('.img5').innerHTML = `<img src="https://openweathermap.org/img/wn/${response.daily[5].weather[0].icon}@2x.png"/>`;
-		document.querySelector('#humid5').innerHTML = `Temp: ${response.daily[5].humidity}%`;
+		document.querySelector('#humid5').innerHTML = `Humidity: ${response.daily[5].humidity}%`;
 		console.log(response);
   
 	  });
