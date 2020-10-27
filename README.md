@@ -14,4 +14,4 @@ In this app you can check out and track weather for your favourite cities. WIth 
 
 For any questions please contact me at ssamoridny@gmail.com
 
-![Weather Dashboard app](https://user-images.githubusercontent.com/30538162/95469785-41693100-093d-11eb-8923-27432a9646b5.png)
+![Weather Dashboard](https://user-images.githubusercontent.com/30538162/95510911-ebfc4680-0973-11eb-9013-ba6600569acb.png)
