@@ -27,3 +27,10 @@ body {
 .btn-orange {
     background-color: orange;
 }
+
+@media only screen and (max-width: 375px) {
+    .headline {
+        font-size: 30px;
+    }
+}
+
